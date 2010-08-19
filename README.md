@@ -1,9 +1,16 @@
-Simple geolocation lib using http://www.ipgp.net/ as backend.
+Simple PHP geolocation lib using http://www.ipgp.net/ as backend.
 
 Usage
 =====
 
-    $location  = GeoLocator::lookup($_SERVER['REMOTE_ADDR']);
+    try
+    {
+        /* GeoLocation */ $location = GeoLocator::lookup($_SERVER['REMOTE_ADDR']);
+    }
+    catch (GeoLocatorException $e)
+    {
+        Logger::log($e);
+    }
     
     $country   = $location->country;   // or $location->country();
     $code      = $location->code;      // or $location->code();
