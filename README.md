@@ -1,4 +1,4 @@
-Simple PHP geolocation lib using http://www.ipgp.net/ as backend.
+Simple PHP geolocation lib using (http://www.ipgp.net/) as backend.
 
 Usage
 =====
